@@ -1,0 +1,7 @@
+No,File,Baris,Jenis Error,Pesan Error / Gejala,Penjelasan & Penyebab,Cara Memperbaiki
+1,proses-pendaftaran-2.php,11,Syntax Error,"Parse error: syntax error, unexpected '='",Variabel tidak diawali tanda $. Tertulis sekolah = ... seharusnya $sekolah = .... PHP mewajibkan tanda dollar untuk variabel.,Tambahkan tanda $ menjadi $sekolah.
+2,proses-pendaftaran-2.php,14,SQL Syntax / Non-Standard,Query might fail or warning,"Penggunaan keyword VALUE pada INSERT. Meski MySQL kadang menerimanya, standar SQL yang benar adalah VALUES.",Ubah VALUE menjadi VALUES.
+3,proses-pendaftaran-2.php,14,Security Vulnerability,SQL Injection,Sangat Berbahaya. Menggunakan variabel langsung dalam string query ('$nama') memungkinkan peretas menyisipkan kode berbahaya via input form.,Gunakan Prepared Statements (mysqli_prepare dan mysqli_stmt_bind_param).
+4,Form-daftar.php,1,HTML Syntax,Browser rendering quirks,Penulisan <DOCTYPE > tidak valid. Standar HTML5 adalah <!DOCTYPE html>.,Ubah menjadi <!DOCTYPE html>.
+5,Form-daftar.php,42,HTML Syntax,Form validation issue,"Tag </fieldset> ditutup di luar form atau tidak sejajar, dan struktur HTML agak berantakan.",Rapikan indentasi dan struktur tag HTML.
+6,koneksi.php,5,Configuration / Logic,Connection Refused,"Password database tertulis ""12345"". Biasanya XAMPP default passwordnya kosong (""""). Jika dipaksa, koneksi akan gagal kecuali Anda memang sudah mengubah password root.",Sesuaikan password dengan konfigurasi server lokal (biasanya kosongkan jika pakai XAMPP standar).
